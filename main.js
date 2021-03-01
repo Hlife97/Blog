@@ -38,3 +38,23 @@ new Swiper('.swiper-container', {
         }
     }
 });
+
+//Sticky navigation
+window.onscroll = function () {
+    myFunction()
+};
+
+//get the current value
+let navbar = document.getElementById("header");
+
+//get the navbar position
+let sticky = navbar.offsetTop;
+
+//sticky function
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
